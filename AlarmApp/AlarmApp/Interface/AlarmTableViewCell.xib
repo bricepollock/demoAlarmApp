@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AlarmTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmTableViewCell" rowHeight="172" id="Hls-OA-orv" customClass="AlarmTableViewCell" customModule="AlarmApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="172"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hls-OA-orv" id="XLs-Sz-r2x">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="171.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Otd-rB-run">
+                        <rect key="frame" x="16" y="16" width="343" height="155.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="asdf asdf as df asdf asd fas dfasd fasdfasdf asdfasasdf asd fas df asd f asd fasd f asdf" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akN-Ip-bPQ">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAs-gB-uuK">
+                                <rect key="frame" x="0.0" y="16" width="343" height="139.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qls-WT-lIT">
+                                        <rect key="frame" x="110.5" y="8" width="122.5" height="123.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JD6-kx-afa">
+                                                <rect key="frame" x="0.0" y="0.0" width="56.5" height="123.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvP-Hb-MfR">
+                                                <rect key="frame" x="72.5" y="0.0" width="50" height="123.5"/>
+                                                <state key="normal" title="Upvote"/>
+                                                <connections>
+                                                    <action selector="didPressUpvote:" destination="Hls-OA-orv" eventType="touchUpInside" id="PHS-Oz-ZIv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="JD6-kx-afa" firstAttribute="top" secondItem="qls-WT-lIT" secondAttribute="top" id="96l-Hf-wAc"/>
+                                            <constraint firstItem="AvP-Hb-MfR" firstAttribute="centerY" secondItem="qls-WT-lIT" secondAttribute="centerY" id="9Xv-tz-nZ1"/>
+                                            <constraint firstItem="AvP-Hb-MfR" firstAttribute="top" secondItem="qls-WT-lIT" secondAttribute="top" id="Kjw-SG-Uli"/>
+                                            <constraint firstItem="AvP-Hb-MfR" firstAttribute="leading" secondItem="JD6-kx-afa" secondAttribute="trailing" constant="16" id="Q6j-ue-Cyj"/>
+                                            <constraint firstItem="JD6-kx-afa" firstAttribute="centerY" secondItem="qls-WT-lIT" secondAttribute="centerY" id="e50-YF-ZCW"/>
+                                            <constraint firstAttribute="trailing" secondItem="AvP-Hb-MfR" secondAttribute="trailing" id="scU-yk-gR3"/>
+                                            <constraint firstItem="JD6-kx-afa" firstAttribute="leading" secondItem="qls-WT-lIT" secondAttribute="leading" id="tmd-Pw-uwo"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qls-WT-lIT" firstAttribute="centerX" secondItem="JAs-gB-uuK" secondAttribute="centerX" id="7FM-Qv-fD7"/>
+                                    <constraint firstItem="qls-WT-lIT" firstAttribute="top" secondItem="JAs-gB-uuK" secondAttribute="top" constant="8" id="XUh-5s-OSH"/>
+                                    <constraint firstItem="qls-WT-lIT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JAs-gB-uuK" secondAttribute="leading" constant="16" id="kzg-cg-HPt"/>
+                                    <constraint firstAttribute="bottom" secondItem="qls-WT-lIT" secondAttribute="bottom" constant="8" id="uqg-pU-eeo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Otd-rB-run" secondAttribute="bottom" id="EK8-xj-QOp"/>
+                    <constraint firstAttribute="trailing" secondItem="Otd-rB-run" secondAttribute="trailing" constant="16" id="aAr-tv-CvG"/>
+                    <constraint firstItem="Otd-rB-run" firstAttribute="top" secondItem="XLs-Sz-r2x" secondAttribute="top" constant="16" id="aah-WH-crc"/>
+                    <constraint firstItem="Otd-rB-run" firstAttribute="leading" secondItem="XLs-Sz-r2x" secondAttribute="leading" constant="16" id="gJi-BS-79k"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bodyLabel" destination="akN-Ip-bPQ" id="aju-lc-GVX"/>
+                <outlet property="upvoteButton" destination="AvP-Hb-MfR" id="kwV-Wj-OEf"/>
+                <outlet property="votesLabel" destination="JD6-kx-afa" id="uOw-E7-gJa"/>
+            </connections>
+            <point key="canvasLocation" x="-4.5" y="939"/>
+        </tableViewCell>
+    </objects>
+</document>
