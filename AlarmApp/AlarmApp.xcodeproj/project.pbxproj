@@ -12,7 +12,13 @@
 		40B85053203CA2E400C82126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B85051203CA2E400C82126 /* Main.storyboard */; };
 		40B85055203CA2E400C82126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B85054203CA2E400C82126 /* Assets.xcassets */; };
 		40B85058203CA2E400C82126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B85056203CA2E400C82126 /* LaunchScreen.storyboard */; };
-		40B85063203CA2E500C82126 /* AlarmAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B85062203CA2E500C82126 /* AlarmAppTests.swift */; };
+		40B85063203CA2E500C82126 /* HandshakeNetworkHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B85062203CA2E500C82126 /* HandshakeNetworkHelperTests.swift */; };
+		40B8506E203CA31200C82126 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B8506D203CA31200C82126 /* NetworkManager.swift */; };
+		40B85070203CA33500C82126 /* HandshakeAlarmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B8506F203CA33500C82126 /* HandshakeAlarmService.swift */; };
+		40B85072203CA51900C82126 /* HandshakeNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B85071203CA51900C82126 /* HandshakeNetworkHelper.swift */; };
+		40B85074203CA76A00C82126 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B85073203CA76A00C82126 /* Logger.swift */; };
+		40B85076203CA7D000C82126 /* HandshakeAlarmStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B85075203CA7D000C82126 /* HandshakeAlarmStructs.swift */; };
+		40B85078203CA85900C82126 /* HandshakeAlarmEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B85077203CA85900C82126 /* HandshakeAlarmEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +40,14 @@
 		40B85057203CA2E400C82126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40B85059203CA2E400C82126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B8505E203CA2E500C82126 /* AlarmAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlarmAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		40B85062203CA2E500C82126 /* AlarmAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmAppTests.swift; sourceTree = "<group>"; };
+		40B85062203CA2E500C82126 /* HandshakeNetworkHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandshakeNetworkHelperTests.swift; sourceTree = "<group>"; };
 		40B85064203CA2E500C82126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40B8506D203CA31200C82126 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		40B8506F203CA33500C82126 /* HandshakeAlarmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandshakeAlarmService.swift; sourceTree = "<group>"; };
+		40B85071203CA51900C82126 /* HandshakeNetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandshakeNetworkHelper.swift; sourceTree = "<group>"; };
+		40B85073203CA76A00C82126 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		40B85075203CA7D000C82126 /* HandshakeAlarmStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandshakeAlarmStructs.swift; sourceTree = "<group>"; };
+		40B85077203CA85900C82126 /* HandshakeAlarmEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandshakeAlarmEncoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,8 @@
 		40B8504C203CA2E400C82126 /* AlarmApp */ = {
 			isa = PBXGroup;
 			children = (
+				40B85073203CA76A00C82126 /* Logger.swift */,
+				40B85079203CAAE500C82126 /* Data */,
 				40B8504D203CA2E400C82126 /* AppDelegate.swift */,
 				40B8504F203CA2E400C82126 /* ViewController.swift */,
 				40B85051203CA2E400C82126 /* Main.storyboard */,
@@ -90,10 +104,22 @@
 		40B85061203CA2E500C82126 /* AlarmAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				40B85062203CA2E500C82126 /* AlarmAppTests.swift */,
+				40B85062203CA2E500C82126 /* HandshakeNetworkHelperTests.swift */,
 				40B85064203CA2E500C82126 /* Info.plist */,
 			);
 			path = AlarmAppTests;
+			sourceTree = "<group>";
+		};
+		40B85079203CAAE500C82126 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				40B8506D203CA31200C82126 /* NetworkManager.swift */,
+				40B85071203CA51900C82126 /* HandshakeNetworkHelper.swift */,
+				40B8506F203CA33500C82126 /* HandshakeAlarmService.swift */,
+				40B85077203CA85900C82126 /* HandshakeAlarmEncoder.swift */,
+				40B85075203CA7D000C82126 /* HandshakeAlarmStructs.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +225,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B8506E203CA31200C82126 /* NetworkManager.swift in Sources */,
+				40B85074203CA76A00C82126 /* Logger.swift in Sources */,
+				40B85078203CA85900C82126 /* HandshakeAlarmEncoder.swift in Sources */,
+				40B85072203CA51900C82126 /* HandshakeNetworkHelper.swift in Sources */,
+				40B85076203CA7D000C82126 /* HandshakeAlarmStructs.swift in Sources */,
 				40B85050203CA2E400C82126 /* ViewController.swift in Sources */,
 				40B8504E203CA2E400C82126 /* AppDelegate.swift in Sources */,
+				40B85070203CA33500C82126 /* HandshakeAlarmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40B85063203CA2E500C82126 /* AlarmAppTests.swift in Sources */,
+				40B85063203CA2E500C82126 /* HandshakeNetworkHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
