@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Alarm View Controller-->
+        <scene sceneID="4jg-iD-xIE">
+            <objects>
+                <viewController storyboardIdentifier="CreateAlarmViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Um-zj-cDl" customClass="CreateAlarmViewController" customModule="AlarmApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FZN-Q2-bcd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DjP-G6-Gkl">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQ4-di-Qcf">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI9-8T-MrX">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="didPressDismiss:" destination="5Um-zj-cDl" eventType="touchUpInside" id="Clo-cV-xni"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgH-ZY-YV2">
+                                                <rect key="frame" x="46" y="0.0" width="251" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9e-TE-idD">
+                                                <rect key="frame" x="297" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="didPressCreate:" destination="5Um-zj-cDl" eventType="touchUpInside" id="QoJ-SZ-Dau"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z0X-4W-TjE">
+                                        <rect key="frame" x="0.0" y="30" width="343" height="617"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3NE-cc-bud" firstAttribute="bottom" secondItem="DjP-G6-Gkl" secondAttribute="bottom" id="4oA-GI-mYM"/>
+                            <constraint firstItem="DjP-G6-Gkl" firstAttribute="top" secondItem="3NE-cc-bud" secondAttribute="top" id="LgQ-pd-2yS"/>
+                            <constraint firstItem="3NE-cc-bud" firstAttribute="trailing" secondItem="DjP-G6-Gkl" secondAttribute="trailing" constant="16" id="Ooa-HQ-Rxj"/>
+                            <constraint firstItem="DjP-G6-Gkl" firstAttribute="leading" secondItem="3NE-cc-bud" secondAttribute="leading" constant="16" id="wHR-OI-LBg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3NE-cc-bud"/>
+                    </view>
+                    <connections>
+                        <outlet property="createButton" destination="H9e-TE-idD" id="43S-G5-4gK"/>
+                        <outlet property="dismissButton" destination="FI9-8T-MrX" id="tqd-go-nmi"/>
+                        <outlet property="titleButton" destination="JgH-ZY-YV2" id="W6S-DW-oxf"/>
+                        <outlet property="userTextView" destination="Z0X-4W-TjE" id="dJg-lv-wG0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bag-N6-5ai" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-286" y="116"/>
+        </scene>
+    </scenes>
+</document>

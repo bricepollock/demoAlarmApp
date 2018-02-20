@@ -20,6 +20,10 @@ struct NetworkManager {
         request.httpMethod = method.rawValue
         request.httpBody = body
         
+        if method != .get {
+            request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        }
+        
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard error == nil else {
                 print("Error on request - \(String(describing: error))")

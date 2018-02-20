@@ -14,12 +14,24 @@ class AlarmsListViewController: UIViewController {
     var alarms = HandshakeAlarmResponse()
     var alarmsViewData = [AlarmTableViewCellData]()
     
+    let newAlarmString = "New Alarm"
+    
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         AlarmTableViewCell.register(in: tableView)
         
+        let createButton = UIBarButtonItem(title: newAlarmString, style: .plain, target: self, action: #selector(createAlarm))
+        navigationItem.rightBarButtonItem = createButton
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        requestAlarmData()
+    }
+    
+    func requestAlarmData() {
         DispatchQueue.global().async { [weak self] in
             self?.alarmService.getAlarms { [weak self] (alarms) in
                 guard let `self` = self else { return }
@@ -31,6 +43,11 @@ class AlarmsListViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @objc func createAlarm() {
+        let creationVC = CreateAlarmViewController.create()
+        present(creationVC, animated: true, completion: nil)
     }
 }
 

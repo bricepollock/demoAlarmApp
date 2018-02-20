@@ -11,7 +11,11 @@ import Foundation
 struct AlarmsListViewControllerProcessor {
     let emptyVotesString = "0 votes"
     func createViewData(for alarms: [HandshakeAlarm], actionDelegate: AlarmTableViewCellDelegate) -> [AlarmTableViewCellData] {
-        return alarms.flatMap { (alarm) in
+        // TODO: test the sorting and elimination of empty strings
+        let sortedAlarms = alarms.sorted { (left, right) -> Bool in
+            return left.updatedAt > right.updatedAt
+        }
+        return sortedAlarms.flatMap { (alarm) in
             // there are a lot of empty body alarms that make a poor experience.
             // So we are going to eliminate them here
             guard let body = alarm.body else { return nil}
