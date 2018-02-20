@@ -9,6 +9,7 @@
 import Foundation
 
 struct AlarmsListViewControllerProcessor {
+    let emptyVotesString = "0 votes"
     func createViewData(for alarms: [HandshakeAlarm], actionDelegate: AlarmTableViewCellDelegate) -> [AlarmTableViewCellData] {
         return alarms.flatMap { (alarm) in
             // there are a lot of empty body alarms that make a poor experience.
@@ -28,6 +29,8 @@ struct AlarmsListViewControllerProcessor {
     }
     
     func voteString(from votes: Int?) -> String {
-        return "\(votes ?? 0) votes"
+        guard let votes = votes else { return emptyVotesString }
+        if votes < 0 { return emptyVotesString }
+        return "\(votes) votes"
     }
 }

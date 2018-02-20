@@ -23,6 +23,7 @@
 		40B85080203CB19C00C82126 /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B8507F203CB19C00C82126 /* AlarmTableViewCell.swift */; };
 		40B85082203CB1A400C82126 /* AlarmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40B85081203CB1A400C82126 /* AlarmTableViewCell.xib */; };
 		40B85084203CB5A000C82126 /* AlarmsListViewControllerProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B85083203CB5A000C82126 /* AlarmsListViewControllerProcessor.swift */; };
+		40B85086203CBABE00C82126 /* AlarmsListViewControllerProcessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B85085203CBABE00C82126 /* AlarmsListViewControllerProcessorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		40B8507F203CB19C00C82126 /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
 		40B85081203CB1A400C82126 /* AlarmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmTableViewCell.xib; sourceTree = "<group>"; };
 		40B85083203CB5A000C82126 /* AlarmsListViewControllerProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsListViewControllerProcessor.swift; sourceTree = "<group>"; };
+		40B85085203CBABE00C82126 /* AlarmsListViewControllerProcessorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsListViewControllerProcessorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				40B85062203CA2E500C82126 /* HandshakeNetworkHelperTests.swift */,
+				40B85085203CBABE00C82126 /* AlarmsListViewControllerProcessorTests.swift */,
 				40B85064203CA2E500C82126 /* Info.plist */,
 			);
 			path = AlarmAppTests;
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40B85063203CA2E500C82126 /* HandshakeNetworkHelperTests.swift in Sources */,
+				40B85086203CBABE00C82126 /* AlarmsListViewControllerProcessorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
